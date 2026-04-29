@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>TEDDY GENERAL SUPPLY - Cosmetics & Home Appliances Mbeya</title>
-    <meta name="description" content="Teddy General Supply tunauza cosmetics bora, nguo za kisasa, na vifaa vya nyumbani. Tupo Mbeya Mwanjelwa kwa bei nafuu zaidi Tanzania.">
+    <title>TEDDY GENERAL SUPPLY - Vipodozi na Vifaa vya Nyumbani Mbeya</title>
+    <meta name="description" content="Teddy General Supply tunauza vipodozi bora, nguo za kisasa, na vifaa vya nyumbani. Tupo Mbeya Mwanjelwa kwa bei nafuu zaidi Tanzania.">
     <meta name="author" content="Mickster Developer">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -23,14 +23,14 @@
         *{ margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
         body{ background:#fdfdfd; color: #333; line-height: 1.6; }
         
-        /* Navigation */
+        /* Urambazaji (Navigation) */
         nav{ display:flex; justify-content:space-between; align-items:center; padding:15px 6%; background: var(--dark-bg); color:white; position:sticky; top:0; z-index:1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         nav h2{ color: var(--primary-color); font-weight: 800; letter-spacing: 1px; }
         nav ul{ display:flex; gap:30px; list-style:none; }
         nav ul li{ cursor:pointer; font-weight: 500; transition: 0.3s; }
         nav ul li:hover { color: var(--primary-color); }
 
-        /* Home Page Styles */
+        /* Mtindo wa Ukurasa wa Nyumbani */
         .hero{ 
             height: 90vh; 
             display:flex; 
@@ -72,14 +72,14 @@
         }
         .hero button:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0, 229, 255, 0.5); }
 
-        /* Features Section */
+        /* Sehemu ya Sifa (Features) */
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 60px 6%; background: white; margin-top: -50px; position: relative; z-index: 10; }
         .feature-card { background: white; padding: 35px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-bottom: 4px solid transparent; transition: 0.3s; }
         .feature-card:hover { border-bottom-color: var(--primary-color); transform: translateY(-5px); }
         .feature-card i { font-size: 40px; color: var(--primary-color); margin-bottom: 20px; }
         .feature-card h3 { margin-bottom: 10px; font-weight: 700; }
 
-        /* Shop Styles */
+        /* Mtindo wa Duka */
         .category-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px; }
         .category-box { background: white; padding: 40px; border-radius: 15px; text-align: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; border: 2px solid #eee; }
         .category-box:hover { transform: translateY(-10px); border-color: var(--primary-color); }
@@ -110,7 +110,7 @@
     <div class="hero">
         <div class="hero-content">
             <h1>TEDDY GENERAL <br> <span>SUPPLY</span></h1>
-            <p>Pata bidhaa bora za Cosmetics, Nguo za Kisasa, na Vifaa vya Nyumbani kwa bei nafuu zaidi Tanzania.</p>
+            <p>Pata bidhaa bora za Vipodozi, Nguo za Kisasa, na Vifaa vya Nyumbani kwa bei nafuu zaidi Tanzania.</p>
             <button onclick="showPage('shop')">ANZA KUNUNUA <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></button>
         </div>
     </div>
@@ -124,7 +124,7 @@
         <div class="feature-card">
             <i class="fas fa-award"></i>
             <h3>Ubora Uhakika</h3>
-            <p>Tunauza bidhaa original pekee zinazokidhi mahitaji yako.</p>
+            <p>Tunauza bidhaa asilia pekee zinazokidhi mahitaji yako.</p>
         </div>
         <div class="feature-card">
             <i class="fas fa-tags"></i>
@@ -148,17 +148,17 @@
     <div id="shop-menu">
         <h2 style="text-align:center; padding:40px;">Chagua Kategoria</h2>
         <div class="category-menu">
-            <div class="category-box" onclick="openCategory('nguo', 'Nguo & Viatu')">
+            <div class="category-box" onclick="openCategory('clothing', 'Nguo & Viatu')">
                 <i class="fas fa-tshirt" style="font-size: 40px; color:#00e5ff; margin-bottom: 15px;"></i>
                 <h3>Nguo & Viatu</h3>
             </div>
-            <div class="category-box" onclick="openCategory('cosmetics', 'Cosmetics')">
+            <div class="category-box" onclick="openCategory('cosmetics', 'Vipodozi')">
                 <i class="fas fa-magic" style="font-size: 40px; color:#00e5ff; margin-bottom: 15px;"></i>
-                <h3>Cosmetics</h3>
+                <h3>Vipodozi</h3>
             </div>
-            <div class="category-box" onclick="openCategory('vifaa', 'Vifaa vya Majumbani')">
+            <div class="category-box" onclick="openCategory('appliances', 'Vifaa vya Nyumbani')">
                 <i class="fas fa-home" style="font-size: 40px; color:#00e5ff; margin-bottom: 15px;"></i>
-                <h3>Vifaa vya Majumbani</h3>
+                <h3>Vifaa vya Nyumbani</h3>
             </div>
         </div>
     </div>
@@ -171,7 +171,7 @@
     </div>
 </section>
 
-<footer><p>© 2026 TEDDY GENERAL SUPPLY | Developed by Mickster Developer</p></footer>
+<footer><p>© 2026 TEDDY GENERAL SUPPLY | Imetengenezwa na Mickster Developer</p></footer>
 
 <script>
     // Supabase Configuration
@@ -188,13 +188,13 @@
             .select('*');
         
         if (error) {
-            console.error('Error fetching products:', error);
+            console.error('Hitilafu ya kupakia bidhaa:', error);
         } else {
             products = data;
         }
     }
 
-    // Piga data punde tu page ikifunguka
+    // Pata data ukurasa unapofunguliwa
     fetchProducts();
 
     function showPage(page){
@@ -212,14 +212,14 @@
         let container = document.getElementById('category-products-list');
         container.innerHTML = "<p style='text-align:center;'>Inapakia bidhaa...</p>";
 
-        // Refresh data ikiwa list ni tupu
+        // Refresh data kama list ni tupu
         if (products.length === 0) await fetchProducts();
 
         let filtered = products.filter(p => p.category === catId);
         container.innerHTML = "";
 
         if (filtered.length === 0) {
-            container.innerHTML = "<p style='text-align:center;'>Hakuna bidhaa kwenye kategoria hii.</p>";
+            container.innerHTML = "<p style='text-align:center;'>Hakuna bidhaa zilizopatikana kwenye kategoria hii.</p>";
             return;
         }
 
@@ -234,7 +234,7 @@
                 <h4 style="margin-top:15px; font-size: 16px;">${p.name}</h4>
                 ${desc}
                 <p style="font-weight: bold; color: #111; margin-top: auto; font-size: 18px;">TSh ${displayPrice}</p>
-                <button onclick="window.open('${link}')" style="width:100%; padding:12px; background:#25d366; color:white; border:none; border-radius:8px; margin-top:10px; cursor:pointer; font-weight:bold;"><i class="fab fa-whatsapp"></i> Agiza</button>
+                <button onclick="window.open('${link}')" style="width:100%; padding:12px; background:#25d366; color:white; border:none; border-radius:8px; margin-top:10px; cursor:pointer; font-weight:bold;"><i class="fab fa-whatsapp"></i> Agiza Sasa</button>
             </div>`;
         });
     }
