@@ -456,7 +456,7 @@
         /* Slider */
         .slider-container { position: relative; width: 100%; height: 220px; overflow: hidden; background: #f9f9f9; }
         .slider-wrapper { display: flex; width: 100%; height: 100%; transition: transform 0.3s ease-in-out; }
-        .slider-wrapper img { width: 100%; height: 100%; object-fit: contain; flex-shrink: 0; }
+        .slider-wrapper img, .slider-wrapper video { width: 100%; height: 100%; object-fit: contain; flex-shrink: 0; }
         .prod-img { width: 100%; height: 220px; object-fit: contain; background: #f9f9f9; display: block; }
         
         .slider-btn {
@@ -816,9 +816,23 @@
             const imageField = p.image || '';
 
             let imageHTML = '';
+            
+            // Function ya kuangalia kama link ni ya video
+            const isVideoLink = (url) => {
+                const cleanUrl = url.split('?')[0].toLowerCase();
+                return cleanUrl.endsWith('.mp4') || cleanUrl.endsWith('.mkv') || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.avi');
+            };
+
             if (imageField.includes(',')) {
                 const imagesArray = imageField.split(',').map(img => img.trim());
-                const slides = imagesArray.map(img => `<img src="${img}" alt="${p.name}">`).join('');
+                const slides = imagesArray.map(img => {
+                    if (isVideoLink(img)) {
+                        return `<video src="${img}" controls muted loop></video>`;
+                    } else {
+                        return `<img src="${img}" alt="${p.name}">`;
+                    }
+                }).join('');
+                
                 imageHTML = `
                     <div class="slider-container" id="slider-${index}">
                         <button class="slider-btn prev" onclick="moveSlide(${index},-1)">&#8249;</button>
@@ -828,7 +842,11 @@
                         <button class="slider-btn next" onclick="moveSlide(${index},1)">&#8250;</button>
                     </div>`;
             } else {
-                imageHTML = `<img src="${imageField}" class="prod-img" alt="${p.name}">`;
+                if (isVideoLink(imageField)) {
+                    imageHTML = `<video src="${imageField}" class="prod-img" controls muted loop style="width: 100%; height: 220px; object-fit: contain; background: #f9f9f9; display: block;"></video>`;
+                } else {
+                    imageHTML = `<img src="${imageField}" class="prod-img" alt="${p.name}">`;
+                }
             }
 
             const card = document.createElement('div');
